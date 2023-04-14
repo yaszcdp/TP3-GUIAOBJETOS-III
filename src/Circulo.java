@@ -12,6 +12,10 @@ public class Circulo {
         this.color = "Rojo";
     }
 
+    public Circulo(){
+        this.radio = 3f;
+    }
+
     public Circulo(Float radio, String color) {
         this.radio = radio;
         this.color = color;
