@@ -26,8 +26,8 @@ public class Cilindro extends Circulo{
 
     // Modificar el método calcular volumen en la clase cilindro para que llame al método de la SUPER clase que calcula
     //el área.
-    public float calculaVolumen (){
-        float volumen = super.calculaArea(radio) * altura;
+    public float calculaVolumen (Float altura){
+        float volumen = super.calculaArea() * altura;
         return volumen;
     }
 
@@ -36,7 +36,7 @@ public class Cilindro extends Circulo{
 
     public float calculaArea (Float radio, Float altura){
         float pi = 3.14F;
-        float areaBase = calculaArea(radio);
+        float areaBase = calculaArea();
         return ((2 * pi) * radio * altura + 2 * areaBase);
     }
 
@@ -44,7 +44,8 @@ public class Cilindro extends Circulo{
     //Cilindro: subclase de + {toString() de Círculo} +altura= {alturaCilindro};
 
     public String toString(){
-        return "Cilindro: subclase de " + super.toString() + "\nAltura Cilindro: " + altura;
+        return "------------------------\n[Cilindro] \nColor: " + super.color + "\nRadio: " + super.radio  + "\nAltura Cilindro: " + altura + "\nÁrea: " + calculaArea(radio, altura) +
+                "\nVolúmen: " + calculaVolumen(altura) + "\n------------------------";
     }
 
 }
